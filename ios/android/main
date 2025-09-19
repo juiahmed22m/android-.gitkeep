@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MJPlayerApp());
+}
+
+class MJPlayerApp extends StatelessWidget {
+  const MJPlayerApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'MJ Player',
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("MJ Player")),
+      body: const Center(
+        child: Text(
+          "Welcome to MJ Player 🎶",
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
